@@ -1,48 +1,17 @@
+import { spacingUnit } from '../components/style-constants';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import HeaderLogo from '../components/header-logo';
-import './index.css'
-
-const spacingUnit = `${1.45 * .5}rem`;
-
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: spacingUnit,
-    }}
-  >
-    <div
-      style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: `${spacingUnit} 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          <HeaderLogo> Jaime Rios</HeaderLogo>
-        </Link>
-      </h1>
-    </div>
-  </div>
-      )
-
-      const TemplateWrapper = ({ children }) => (
+import Header from '../components/header'
+import './index.css';
+const TemplateWrapper = ({ children }) => (
         <div>
           <Helmet
-            title="Gatsby Default Starter"
+            title="Jaime Rios Front End Developer"
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'description', content: 'I’m Jaime a freelance Front End Developer based in Mexico City. Developing for the web since 2015, helping online businesses, entrepreneurs, users and organizations reach their goals faster, by developing faster, useful and responsive websites.' },
+              { name: 'keywords', content: 'web, front end developer, javascript, web developer, mexico city' },
             ]}
           />
           <Header />
@@ -63,4 +32,4 @@ const Header = () => (
           children: PropTypes.func,
         }
 
-        export default TemplateWrapper
+export default TemplateWrapper
